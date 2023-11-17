@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".loginpage"
+    android:background="#F3F2F7">
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".LoginActivity">
+
+        <!-- Logo or App Name -->
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="50dp"
+
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img" />
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Username or Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            app:startIconDrawable="@drawable/baseline_person_24"
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="USER NAME"
+            android:layout_marginTop="50dp"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@android:drawable/ic_lock_lock"
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PASSWORD"
+            app:endIconMode="password_toggle"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Password -->
+
+
+        <!-- Login Button -->
+        <Button
+
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="50dp"/>
+
+        <!-- Forgot Password Link -->
+        <TextView
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="end"
+            android:text="Forgot Password?"
+            android:textColor="#000000"
+            android:textColorHint="#C1ADAD" />
+
+        <!-- Sign Up Link -->
+
+    </LinearLayout>
+
+
+</FrameLayout>
